@@ -58,14 +58,22 @@ function tgm_plugin_active_function() {
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
-
-
-
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
+		//ACF PRO
 		array(
-			'name'     => 'BuddyPress',
-			'slug'     => 'buddypress',
-			'required' => false,
+			'name'     => 'Advanced Custom Fields Pro',
+			'slug'     => 'advanced-custom-fields-pro',
+			'source'   => get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro_6.0.6.zip',
+			'required' => true,
+		),
+		array(
+			'name'      => 'Advanced Custom Fields: Font Awesome Field',
+			'slug'      => 'advanced-custom-fields-font-awesome',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'Contact Form 7',
+			'slug'      => 'contact-form-7',
+			'required'  => false,
 		),
 
 

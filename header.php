@@ -14,21 +14,38 @@
                     <div class="row">
                         <div class="col-md-6 d-flex align-items-center">
                             <p class="mb-0 phone pl-md-2">
-                                <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
-                                <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+								<?php
+								$phone = get_field( 'phone', 'option' );
+								$email = get_field( 'email', 'option' );
+								?>
+                                <a href="tel:<?php if ( $phone ) {
+									echo esc_html( $phone );
+								} ?>" class="mr-2"><span class="fa fa-phone mr-1"></span><?php if ( $phone ) {
+										echo esc_html( $phone );
+									} ?></a>
+                                <a href="mailto:<?php if ( $email ) {
+									echo esc_html( $email );
+								} ?>"><span class="fa fa-paper-plane mr-1"></span> <?php if ( $email ) {
+										echo esc_html( $email );
+									} ?></a>
                             </p>
                         </div>
                         <div class="col-md-6 d-flex justify-content-md-end">
                             <div class="social-media">
                                 <p class="mb-0 d-flex">
-                                    <a href="#" class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-                                    <a href="#" class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-                                    <a href="#" class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-                                    <a href="#" class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+									<?php
+									$socials = get_field( 'header_social', 'option' );
+									if ( $socials ) {
+										foreach ( $socials as $social ) {
+											?>
+                                            <a href="<?php echo esc_url( $social['link'] ) ?>"
+                                               class="d-flex align-items-center justify-content-center"><span
+                                                        class="<?php echo esc_attr( $social['icon'] ) ?>"><i
+                                                            class="sr-only"><?php echo esc_html( $social['icon_name'] ) ?></i></span></a>
+											<?php
+										}
+									}
+									?>
                                 </p>
                             </div>
                         </div>
@@ -53,7 +70,7 @@
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars"></span> <?php echo esc_html__( 'Menu' ), 'accounting' ?>
+            <span class="fa fa-bars"></span> <?php echo esc_html__( 'Menu', 'accounting' ) ?>
         </button>
 		<?php
 		wp_nav_menu( array(

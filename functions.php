@@ -144,6 +144,7 @@ function accounting_theme_scripts() {
 
 	//css
 	wp_enqueue_style( 'accounting-montserrat', '//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap' );
+	wp_enqueue_style( 'accounting-all-awesomesix', get_template_directory_uri() . '/assets/css/all.min.css', array(), _S_VERSION, 'all' );
 	wp_enqueue_style( 'accounting-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), _S_VERSION, 'all' );
 	wp_enqueue_style( 'accounting-animate', get_template_directory_uri() . '/assets/css/animate.css', array(), _S_VERSION, 'all' );
 	wp_enqueue_style( 'accounting-owl-carousel', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', array(), _S_VERSION, 'all' );

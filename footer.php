@@ -1,20 +1,4 @@
-<section class="ftco-section ftco-no-pb ftco-no-pt bg-secondary">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-md-7 d-flex align-items-center">
-                <h2 class="mb-3 mb-sm-0" style="color:black; font-size: 22px;">Sign Up for Your Free 1st Accounting Consultation</h2>
-            </div>
-            <div class="col-md-5 d-flex align-items-center">
-                <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                        <input type="text" class="form-control" placeholder="Enter email address">
-                        <input type="submit" value="Subscribe" class="submit px-3">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+
 <footer class="footer">
     <div class="container-fluid px-lg-5">
         <div class="row">
@@ -99,14 +83,14 @@
     </div>
 </footer>
 <!-- loader -->
-<!--
+
 <div id="ftco-loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">
         <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
     </svg>
 </div>
- -->
+
 <?php wp_footer();?>
 </body>
 </html>
