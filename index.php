@@ -1,11 +1,16 @@
-<?php get_header()?>
-<section class="hero-wrap hero-wrap-2" style="background-image: url('<?php echo esc_url( get_field( 'blog_page_breadcrumb_image', 'option' )) ?>');" data-stellar-background-ratio="0.5">
+<?php get_header() ?>
+<section class="hero-wrap hero-wrap-2"
+         style="background-image: url('<?php echo esc_url( get_field( 'blog_page_breadcrumb_image', 'option' ) ) ?>');"
+         data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end">
             <div class="col-md-9 ftco-animate pb-5">
-                <p class="breadcrumbs mb-2"><span class="mr-2"><a href="<?php echo esc_url( site_url() ) ?>"><?php echo esc_html__( 'Home', 'accounting' ) ?>  <i class="ion-ios-arrow-forward"></i></a></span> <span><?php single_post_title()?> <i class="ion-ios-arrow-forward"></i></span></p>
-                <h1 class="mb-0 bread"><?php single_post_title()?></h1>
+                <p class="breadcrumbs mb-2"><span class="mr-2"><a
+                                href="<?php echo esc_url( site_url() ) ?>"><?php echo esc_html__( 'Home', 'accounting' ) ?>  <i
+                                    class="ion-ios-arrow-forward"></i></a></span> <span><?php single_post_title() ?> <i
+                                class="ion-ios-arrow-forward"></i></span></p>
+                <h1 class="mb-0 bread"><?php single_post_title() ?></h1>
             </div>
         </div>
     </div>
@@ -13,90 +18,33 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row d-flex">
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20 rounded" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/image_1.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <div class="meta mb-2">
-                            <div><a href="#">March 31, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+			<?php
+			if ( have_posts() ) {
+				while ( have_posts() ) {
+					the_post();
+
+					?>
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a href="<?php the_permalink(); ?>" class="block-20 rounded"
+                               style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+                            </a>
+                            <div class="text p-4">
+                                <div class="meta mb-2">
+                                    <div><?php echo get_the_date( 'F j, Y' ) ?></div>
+                                    <div><?php the_author_posts_link() ?></div>
+                                    <div><a href="<?php the_permalink(); ?>" class="meta-chat"><span
+                                                    class="fa fa-comment"></span> <?php echo get_comments_number(); ?>
+                                        </a></div>
+                                </div>
+                                <h3 class="heading"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+                            </div>
                         </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20 rounded" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/image_2.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <div class="meta mb-2">
-                            <div><a href="#">March 31, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20 rounded" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/image_3.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <div class="meta mb-2">
-                            <div><a href="#">March 31, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20 rounded" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/image_3.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <div class="meta mb-2">
-                            <div><a href="#">March 31, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20 rounded" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/image_5.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <div class="meta mb-2">
-                            <div><a href="#">March 31, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20 rounded" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/image_6.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <div class="meta mb-2">
-                            <div><a href="#">March 31, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                    </div>
-                </div>
-            </div>
+				<?php }
+			} ?>
+
+
         </div>
         <div class="row mt-5">
             <div class="col text-center">
@@ -115,4 +63,4 @@
         </div>
     </div>
 </section>
-<?php get_footer()?>
+<?php get_footer() ?>
