@@ -13,3 +13,22 @@ Text Domain: accounting
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 */
+.footer ul{
+    padding-left: 0px;
+}
+.footer li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer li a {
+    color: rgba(255, 255, 255, 0.5);
+
+}
+.footer li a:hover{
+    color:#1BA12D;
+}
+.pt-80{
+    padding-top: 80px;
+    background: #f8f9fd;
+}

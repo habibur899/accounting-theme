@@ -8,8 +8,12 @@
                 <h2 class="mb-3 mb-sm-0"
                     style="color:black; font-size: 22px;"><?php echo esc_html( $cta['cta_heading'] ) ?></h2>
             </div>
-            <div class="col-md-5 d-flex align-items-center subscribe-form">
-				<?php echo do_shortcode( $cta['cta_form'] ) ?>
+            <div class="col-md-5 d-flex align-items-center">
+                <div class="subscribe-form">
+                    <div class="form-group d-flex">
+						<?php echo do_shortcode( $cta['cta_form'] ) ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

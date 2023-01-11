@@ -99,6 +99,8 @@ function accounting_theme_setup() {
 			'flex-height' => true,
 		)
 	);
+	//Remove block widget
+//	remove_theme_support( 'widgets-block-editor' );
 }
 
 add_action( 'after_setup_theme', 'accounting_theme_setup' );
@@ -133,6 +135,40 @@ function accounting_theme_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer One', 'accounting' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Add footer widgets here.', 'accounting' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title footer-heading">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Two', 'accounting' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Add footer widgets here.', 'accounting' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title footer-heading">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Three', 'accounting' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Add footer widgets here.', 'accounting' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title footer-heading">',
+			'after_title'   => '</h2>',
+		)
+	);
+
 }
 
 add_action( 'widgets_init', 'accounting_theme_widgets_init' );
