@@ -64,16 +64,26 @@ function tgm_plugin_active_function() {
 			'slug'     => 'advanced-custom-fields-pro',
 			'source'   => get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro_6.0.6.zip',
 			'required' => true,
+		),		array(
+			'name'     => 'Accounting Core',
+			'slug'     => 'accounting-core',
+			'source'   => get_stylesheet_directory() . '/plugins/accounting-core.zip',
+			'required' => true,
 		),
 		array(
-			'name'      => 'Advanced Custom Fields: Font Awesome Field',
-			'slug'      => 'advanced-custom-fields-font-awesome',
-			'required'  => false,
+			'name'     => 'Advanced Custom Fields: Font Awesome Field',
+			'slug'     => 'advanced-custom-fields-font-awesome',
+			'required' => false,
 		),
 		array(
-			'name'      => 'Contact Form 7',
-			'slug'      => 'contact-form-7',
-			'required'  => false,
+			'name'     => 'Contact Form 7',
+			'slug'     => 'contact-form-7',
+			'required' => false,
+		),
+		array(
+			'name'     => 'One Click Demo Import',
+			'slug'     => 'one-click-demo-import',
+			'required' => false,
 		),
 
 

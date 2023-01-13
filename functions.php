@@ -210,9 +210,25 @@ function accounting_theme_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'accounting_theme_scripts' );
 
+// Acf setting
+function my_acf_json_save_point( $path ) {
+
+	// update path
+	$path = get_stylesheet_directory() . '/acf-json';
+
+
+	// return
+	return $path;
+
+}
+
+add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
+
+
 /**
  * file init
  */
 require get_template_directory() . '/inc/tgm/tgm-active.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+require get_template_directory() . '/inc/demo-import.php';
