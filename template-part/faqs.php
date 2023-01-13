@@ -42,13 +42,13 @@
                                     </h2>
                                 </div>
                                 <div class="collapse <?php
-                                if($i==1){
-                                    echo "show";
-                                }
-                                ?>" id="collapse<?php echo esc_attr( $i ) ?>" role="tabpanel"
+								if ( $i == 1 ) {
+									echo "show";
+								}
+								?>" id="collapse<?php echo esc_attr( $i ) ?>" role="tabpanel"
                                      aria-labelledby="heading<?php echo esc_attr( $i ) ?>">
                                     <div class="card-body py-3 px-0">
-										<?php echo $faq['faq_description'] ?>
+										<?php echo wp_kses_post( $faq['faq_description'] ) ?>
                                     </div>
                                 </div>
                             </div>

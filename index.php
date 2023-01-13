@@ -24,7 +24,7 @@
 					the_post();
 
 					?>
-                    <div class="col-md-4 d-flex ftco-animate">
+                    <div <?php post_class( 'col-md-4 d-flex ftco-animate' ); ?>>
                         <div class="blog-entry align-self-stretch">
                             <a href="<?php the_permalink(); ?>" class="block-20 rounded"
                                style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
