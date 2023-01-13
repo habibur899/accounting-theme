@@ -32,3 +32,15 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     padding-top: 80px;
     background: #f8f9fd;
 }
+.subscribe-form .form-group .submit {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: auto;
+    padding: 11px 10px;
+}
+.comment-list li .vcard img {
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
+}

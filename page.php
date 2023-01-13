@@ -1,8 +1,9 @@
 <?php get_header();
 get_template_part( '/template-part/breadcrumb' ); ?>
-<div class="container">
-    <div class="row">
-		<?php the_content(); ?>
-    </div>
-</div>
+		<?php if ( have_posts() ) {
+			while ( have_posts() ) {
+				the_post();
+				the_content();
+			}
+		} ?>
 <?php get_footer() ?>
